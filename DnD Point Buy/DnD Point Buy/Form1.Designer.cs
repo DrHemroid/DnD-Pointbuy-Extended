@@ -52,7 +52,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.ui_points_remaining = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.ui_points_total = new System.Windows.Forms.NumericUpDown();
             this.ui_bonus_str = new System.Windows.Forms.NumericUpDown();
             this.ui_bonus_dex = new System.Windows.Forms.NumericUpDown();
@@ -96,6 +95,11 @@
             this.ui_cost_san = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.checkBoxHonor = new System.Windows.Forms.CheckBox();
+            this.checkBoxSanity = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -118,6 +122,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ui_bonus_hon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ui_bonus_san)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -128,7 +134,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(569, 462);
+            this.tabControl1.Size = new System.Drawing.Size(565, 462);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -137,7 +143,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(561, 436);
+            this.tabPage1.Size = new System.Drawing.Size(557, 436);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Extended Calculator";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -151,6 +157,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label15, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 2);
@@ -171,7 +178,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label13, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.ui_points_remaining, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.ui_points_total, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.ui_bonus_str, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.ui_bonus_dex, 2, 3);
@@ -197,7 +203,6 @@
             this.tableLayoutPanel1.Controls.Add(this.ui_cost_int, 5, 5);
             this.tableLayoutPanel1.Controls.Add(this.ui_cost_wis, 5, 6);
             this.tableLayoutPanel1.Controls.Add(this.ui_cost_cha, 5, 7);
-            this.tableLayoutPanel1.Controls.Add(this.buttonReset, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label14, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.ui_stat_hon, 1, 8);
@@ -210,6 +215,7 @@
             this.tableLayoutPanel1.Controls.Add(this.ui_mod_san, 4, 9);
             this.tableLayoutPanel1.Controls.Add(this.ui_cost_hon, 5, 8);
             this.tableLayoutPanel1.Controls.Add(this.ui_cost_san, 5, 9);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 3, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -224,7 +230,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.50028F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.50028F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.50028F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(555, 430);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(551, 430);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label15
@@ -232,7 +238,7 @@
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(15, 397);
+            this.label15.Location = new System.Drawing.Point(14, 397);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(74, 25);
             this.label15.TabIndex = 63;
@@ -243,7 +249,7 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(40, 316);
+            this.label11.Location = new System.Drawing.Point(39, 316);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 25);
             this.label11.TabIndex = 16;
@@ -254,7 +260,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(46, 117);
+            this.label6.Location = new System.Drawing.Point(45, 117);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 25);
             this.label6.TabIndex = 5;
@@ -264,7 +270,7 @@
             // 
             this.ui_stat_str.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_stat_str.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_stat_str.Location = new System.Drawing.Point(95, 113);
+            this.ui_stat_str.Location = new System.Drawing.Point(94, 113);
             this.ui_stat_str.Maximum = new decimal(new int[] {
             18,
             0,
@@ -291,7 +297,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(43, 157);
+            this.label7.Location = new System.Drawing.Point(42, 157);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 25);
             this.label7.TabIndex = 12;
@@ -302,7 +308,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(37, 196);
+            this.label8.Location = new System.Drawing.Point(36, 196);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 25);
             this.label8.TabIndex = 13;
@@ -313,7 +319,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(48, 236);
+            this.label9.Location = new System.Drawing.Point(47, 236);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 25);
             this.label9.TabIndex = 14;
@@ -324,7 +330,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(44, 276);
+            this.label10.Location = new System.Drawing.Point(43, 276);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 25);
             this.label10.TabIndex = 15;
@@ -334,7 +340,7 @@
             // 
             this.ui_stat_dex.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_stat_dex.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_stat_dex.Location = new System.Drawing.Point(95, 153);
+            this.ui_stat_dex.Location = new System.Drawing.Point(94, 153);
             this.ui_stat_dex.Maximum = new decimal(new int[] {
             18,
             0,
@@ -360,7 +366,7 @@
             // 
             this.ui_stat_con.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_stat_con.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_stat_con.Location = new System.Drawing.Point(95, 192);
+            this.ui_stat_con.Location = new System.Drawing.Point(94, 192);
             this.ui_stat_con.Maximum = new decimal(new int[] {
             18,
             0,
@@ -386,7 +392,7 @@
             // 
             this.ui_stat_int.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_stat_int.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_stat_int.Location = new System.Drawing.Point(95, 232);
+            this.ui_stat_int.Location = new System.Drawing.Point(94, 232);
             this.ui_stat_int.Maximum = new decimal(new int[] {
             18,
             0,
@@ -412,7 +418,7 @@
             // 
             this.ui_stat_wis.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_stat_wis.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_stat_wis.Location = new System.Drawing.Point(95, 272);
+            this.ui_stat_wis.Location = new System.Drawing.Point(94, 272);
             this.ui_stat_wis.Maximum = new decimal(new int[] {
             18,
             0,
@@ -438,7 +444,7 @@
             // 
             this.ui_stat_cha.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_stat_cha.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_stat_cha.Location = new System.Drawing.Point(95, 312);
+            this.ui_stat_cha.Location = new System.Drawing.Point(94, 312);
             this.ui_stat_cha.Maximum = new decimal(new int[] {
             18,
             0,
@@ -465,7 +471,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(95, 90);
+            this.label3.Location = new System.Drawing.Point(94, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 20);
             this.label3.TabIndex = 26;
@@ -476,7 +482,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(187, 91);
+            this.label4.Location = new System.Drawing.Point(185, 91);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 19);
             this.label4.TabIndex = 27;
@@ -487,7 +493,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(279, 90);
+            this.label5.Location = new System.Drawing.Point(276, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 20);
             this.label5.TabIndex = 28;
@@ -498,7 +504,7 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(371, 90);
+            this.label12.Location = new System.Drawing.Point(367, 90);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(69, 20);
             this.label12.TabIndex = 29;
@@ -509,7 +515,7 @@
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(463, 90);
+            this.label13.Location = new System.Drawing.Point(458, 90);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(79, 20);
             this.label13.TabIndex = 30;
@@ -521,7 +527,7 @@
             this.ui_points_remaining.BackColor = System.Drawing.Color.White;
             this.ui_points_remaining.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_points_remaining.ForeColor = System.Drawing.Color.Green;
-            this.ui_points_remaining.Location = new System.Drawing.Point(463, 25);
+            this.ui_points_remaining.Location = new System.Drawing.Point(458, 25);
             this.ui_points_remaining.Name = "ui_points_remaining";
             this.ui_points_remaining.ReadOnly = true;
             this.ui_points_remaining.Size = new System.Drawing.Size(84, 39);
@@ -534,29 +540,17 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(372, 24);
+            this.label2.Location = new System.Drawing.Point(367, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 42);
             this.label2.TabIndex = 25;
             this.label2.Text = "Remaning Points:";
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 42);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Total Points:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ui_points_total
             // 
             this.ui_points_total.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_points_total.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_points_total.Location = new System.Drawing.Point(95, 25);
+            this.ui_points_total.Location = new System.Drawing.Point(94, 25);
             this.ui_points_total.Maximum = new decimal(new int[] {
             54,
             0,
@@ -582,7 +576,7 @@
             // 
             this.ui_bonus_str.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_bonus_str.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_bonus_str.Location = new System.Drawing.Point(187, 113);
+            this.ui_bonus_str.Location = new System.Drawing.Point(185, 113);
             this.ui_bonus_str.Maximum = new decimal(new int[] {
             2,
             0,
@@ -598,7 +592,7 @@
             // 
             this.ui_bonus_dex.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_bonus_dex.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_bonus_dex.Location = new System.Drawing.Point(187, 153);
+            this.ui_bonus_dex.Location = new System.Drawing.Point(185, 153);
             this.ui_bonus_dex.Maximum = new decimal(new int[] {
             2,
             0,
@@ -614,7 +608,7 @@
             // 
             this.ui_bonus_con.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_bonus_con.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_bonus_con.Location = new System.Drawing.Point(187, 192);
+            this.ui_bonus_con.Location = new System.Drawing.Point(185, 192);
             this.ui_bonus_con.Maximum = new decimal(new int[] {
             2,
             0,
@@ -630,7 +624,7 @@
             // 
             this.ui_bonus_int.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_bonus_int.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_bonus_int.Location = new System.Drawing.Point(187, 232);
+            this.ui_bonus_int.Location = new System.Drawing.Point(185, 232);
             this.ui_bonus_int.Maximum = new decimal(new int[] {
             2,
             0,
@@ -646,7 +640,7 @@
             // 
             this.ui_bonus_wis.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_bonus_wis.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_bonus_wis.Location = new System.Drawing.Point(187, 272);
+            this.ui_bonus_wis.Location = new System.Drawing.Point(185, 272);
             this.ui_bonus_wis.Maximum = new decimal(new int[] {
             2,
             0,
@@ -662,7 +656,7 @@
             // 
             this.ui_bonus_cha.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_bonus_cha.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_bonus_cha.Location = new System.Drawing.Point(187, 312);
+            this.ui_bonus_cha.Location = new System.Drawing.Point(185, 312);
             this.ui_bonus_cha.Maximum = new decimal(new int[] {
             2,
             0,
@@ -680,7 +674,7 @@
             this.ui_score_str.BackColor = System.Drawing.Color.MediumBlue;
             this.ui_score_str.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_score_str.ForeColor = System.Drawing.Color.White;
-            this.ui_score_str.Location = new System.Drawing.Point(279, 113);
+            this.ui_score_str.Location = new System.Drawing.Point(276, 113);
             this.ui_score_str.Name = "ui_score_str";
             this.ui_score_str.ReadOnly = true;
             this.ui_score_str.Size = new System.Drawing.Size(84, 39);
@@ -694,7 +688,7 @@
             this.ui_mod_str.BackColor = System.Drawing.Color.White;
             this.ui_mod_str.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_mod_str.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ui_mod_str.Location = new System.Drawing.Point(371, 113);
+            this.ui_mod_str.Location = new System.Drawing.Point(367, 113);
             this.ui_mod_str.Name = "ui_mod_str";
             this.ui_mod_str.ReadOnly = true;
             this.ui_mod_str.Size = new System.Drawing.Size(84, 39);
@@ -708,7 +702,7 @@
             this.ui_score_dex.BackColor = System.Drawing.Color.RoyalBlue;
             this.ui_score_dex.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_score_dex.ForeColor = System.Drawing.Color.White;
-            this.ui_score_dex.Location = new System.Drawing.Point(279, 153);
+            this.ui_score_dex.Location = new System.Drawing.Point(276, 153);
             this.ui_score_dex.Name = "ui_score_dex";
             this.ui_score_dex.ReadOnly = true;
             this.ui_score_dex.Size = new System.Drawing.Size(84, 39);
@@ -722,7 +716,7 @@
             this.ui_score_con.BackColor = System.Drawing.Color.RoyalBlue;
             this.ui_score_con.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_score_con.ForeColor = System.Drawing.Color.White;
-            this.ui_score_con.Location = new System.Drawing.Point(279, 192);
+            this.ui_score_con.Location = new System.Drawing.Point(276, 192);
             this.ui_score_con.Name = "ui_score_con";
             this.ui_score_con.ReadOnly = true;
             this.ui_score_con.Size = new System.Drawing.Size(84, 39);
@@ -736,7 +730,7 @@
             this.ui_score_int.BackColor = System.Drawing.Color.RoyalBlue;
             this.ui_score_int.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_score_int.ForeColor = System.Drawing.Color.White;
-            this.ui_score_int.Location = new System.Drawing.Point(279, 232);
+            this.ui_score_int.Location = new System.Drawing.Point(276, 232);
             this.ui_score_int.Name = "ui_score_int";
             this.ui_score_int.ReadOnly = true;
             this.ui_score_int.Size = new System.Drawing.Size(84, 39);
@@ -750,7 +744,7 @@
             this.ui_score_wis.BackColor = System.Drawing.Color.RoyalBlue;
             this.ui_score_wis.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_score_wis.ForeColor = System.Drawing.Color.White;
-            this.ui_score_wis.Location = new System.Drawing.Point(279, 272);
+            this.ui_score_wis.Location = new System.Drawing.Point(276, 272);
             this.ui_score_wis.Name = "ui_score_wis";
             this.ui_score_wis.ReadOnly = true;
             this.ui_score_wis.Size = new System.Drawing.Size(84, 39);
@@ -764,7 +758,7 @@
             this.ui_score_cha.BackColor = System.Drawing.Color.RoyalBlue;
             this.ui_score_cha.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_score_cha.ForeColor = System.Drawing.Color.White;
-            this.ui_score_cha.Location = new System.Drawing.Point(279, 312);
+            this.ui_score_cha.Location = new System.Drawing.Point(276, 312);
             this.ui_score_cha.Name = "ui_score_cha";
             this.ui_score_cha.ReadOnly = true;
             this.ui_score_cha.Size = new System.Drawing.Size(84, 39);
@@ -778,7 +772,7 @@
             this.ui_mod_con.BackColor = System.Drawing.Color.White;
             this.ui_mod_con.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_mod_con.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ui_mod_con.Location = new System.Drawing.Point(371, 192);
+            this.ui_mod_con.Location = new System.Drawing.Point(367, 192);
             this.ui_mod_con.Name = "ui_mod_con";
             this.ui_mod_con.ReadOnly = true;
             this.ui_mod_con.Size = new System.Drawing.Size(84, 39);
@@ -792,7 +786,7 @@
             this.ui_mod_dex.BackColor = System.Drawing.Color.White;
             this.ui_mod_dex.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_mod_dex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ui_mod_dex.Location = new System.Drawing.Point(371, 153);
+            this.ui_mod_dex.Location = new System.Drawing.Point(367, 153);
             this.ui_mod_dex.Name = "ui_mod_dex";
             this.ui_mod_dex.ReadOnly = true;
             this.ui_mod_dex.Size = new System.Drawing.Size(84, 39);
@@ -806,7 +800,7 @@
             this.ui_mod_int.BackColor = System.Drawing.Color.White;
             this.ui_mod_int.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_mod_int.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ui_mod_int.Location = new System.Drawing.Point(371, 232);
+            this.ui_mod_int.Location = new System.Drawing.Point(367, 232);
             this.ui_mod_int.Name = "ui_mod_int";
             this.ui_mod_int.ReadOnly = true;
             this.ui_mod_int.Size = new System.Drawing.Size(84, 39);
@@ -820,7 +814,7 @@
             this.ui_mod_wis.BackColor = System.Drawing.Color.White;
             this.ui_mod_wis.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_mod_wis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ui_mod_wis.Location = new System.Drawing.Point(371, 272);
+            this.ui_mod_wis.Location = new System.Drawing.Point(367, 272);
             this.ui_mod_wis.Name = "ui_mod_wis";
             this.ui_mod_wis.ReadOnly = true;
             this.ui_mod_wis.Size = new System.Drawing.Size(84, 39);
@@ -834,7 +828,7 @@
             this.ui_mod_cha.BackColor = System.Drawing.Color.White;
             this.ui_mod_cha.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_mod_cha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ui_mod_cha.Location = new System.Drawing.Point(371, 312);
+            this.ui_mod_cha.Location = new System.Drawing.Point(367, 312);
             this.ui_mod_cha.Name = "ui_mod_cha";
             this.ui_mod_cha.ReadOnly = true;
             this.ui_mod_cha.Size = new System.Drawing.Size(84, 39);
@@ -848,7 +842,7 @@
             this.ui_cost_str.BackColor = System.Drawing.Color.White;
             this.ui_cost_str.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_cost_str.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.ui_cost_str.Location = new System.Drawing.Point(463, 113);
+            this.ui_cost_str.Location = new System.Drawing.Point(458, 113);
             this.ui_cost_str.Name = "ui_cost_str";
             this.ui_cost_str.ReadOnly = true;
             this.ui_cost_str.Size = new System.Drawing.Size(84, 39);
@@ -862,7 +856,7 @@
             this.ui_cost_dex.BackColor = System.Drawing.Color.White;
             this.ui_cost_dex.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_cost_dex.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.ui_cost_dex.Location = new System.Drawing.Point(463, 153);
+            this.ui_cost_dex.Location = new System.Drawing.Point(458, 153);
             this.ui_cost_dex.Name = "ui_cost_dex";
             this.ui_cost_dex.ReadOnly = true;
             this.ui_cost_dex.Size = new System.Drawing.Size(84, 39);
@@ -876,7 +870,7 @@
             this.ui_cost_con.BackColor = System.Drawing.Color.White;
             this.ui_cost_con.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_cost_con.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.ui_cost_con.Location = new System.Drawing.Point(463, 192);
+            this.ui_cost_con.Location = new System.Drawing.Point(458, 192);
             this.ui_cost_con.Name = "ui_cost_con";
             this.ui_cost_con.ReadOnly = true;
             this.ui_cost_con.Size = new System.Drawing.Size(84, 39);
@@ -890,7 +884,7 @@
             this.ui_cost_int.BackColor = System.Drawing.Color.White;
             this.ui_cost_int.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_cost_int.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.ui_cost_int.Location = new System.Drawing.Point(463, 232);
+            this.ui_cost_int.Location = new System.Drawing.Point(458, 232);
             this.ui_cost_int.Name = "ui_cost_int";
             this.ui_cost_int.ReadOnly = true;
             this.ui_cost_int.Size = new System.Drawing.Size(84, 39);
@@ -904,7 +898,7 @@
             this.ui_cost_wis.BackColor = System.Drawing.Color.White;
             this.ui_cost_wis.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_cost_wis.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.ui_cost_wis.Location = new System.Drawing.Point(463, 272);
+            this.ui_cost_wis.Location = new System.Drawing.Point(458, 272);
             this.ui_cost_wis.Name = "ui_cost_wis";
             this.ui_cost_wis.ReadOnly = true;
             this.ui_cost_wis.Size = new System.Drawing.Size(84, 39);
@@ -918,7 +912,7 @@
             this.ui_cost_cha.BackColor = System.Drawing.Color.White;
             this.ui_cost_cha.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_cost_cha.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.ui_cost_cha.Location = new System.Drawing.Point(463, 312);
+            this.ui_cost_cha.Location = new System.Drawing.Point(458, 312);
             this.ui_cost_cha.Name = "ui_cost_cha";
             this.ui_cost_cha.ReadOnly = true;
             this.ui_cost_cha.Size = new System.Drawing.Size(84, 39);
@@ -929,9 +923,10 @@
             // buttonReset
             // 
             this.buttonReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonReset.Location = new System.Drawing.Point(279, 21);
+            this.buttonReset.Location = new System.Drawing.Point(0, 0);
+            this.buttonReset.Margin = new System.Windows.Forms.Padding(0);
             this.buttonReset.Name = "buttonReset";
-            this.buttonReset.Size = new System.Drawing.Size(86, 47);
+            this.buttonReset.Size = new System.Drawing.Size(91, 45);
             this.buttonReset.TabIndex = 60;
             this.buttonReset.Text = "Reset all\r\nto default";
             this.buttonReset.UseVisualStyleBackColor = true;
@@ -946,13 +941,13 @@
             this.tableLayoutPanel2.Controls.Add(this.ui_rule_extended, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.ui_rule_standard, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(187, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(185, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(86, 84);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(85, 84);
             this.tableLayoutPanel2.TabIndex = 61;
             // 
             // ui_rule_minmax
@@ -998,7 +993,7 @@
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(11, 356);
+            this.label14.Location = new System.Drawing.Point(10, 356);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(78, 25);
             this.label14.TabIndex = 62;
@@ -1008,7 +1003,7 @@
             // 
             this.ui_stat_hon.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_stat_hon.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_stat_hon.Location = new System.Drawing.Point(95, 352);
+            this.ui_stat_hon.Location = new System.Drawing.Point(94, 352);
             this.ui_stat_hon.Maximum = new decimal(new int[] {
             18,
             0,
@@ -1033,7 +1028,7 @@
             // 
             this.ui_stat_san.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_stat_san.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_stat_san.Location = new System.Drawing.Point(95, 392);
+            this.ui_stat_san.Location = new System.Drawing.Point(94, 392);
             this.ui_stat_san.Maximum = new decimal(new int[] {
             18,
             0,
@@ -1058,7 +1053,7 @@
             // 
             this.ui_bonus_hon.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_bonus_hon.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_bonus_hon.Location = new System.Drawing.Point(187, 352);
+            this.ui_bonus_hon.Location = new System.Drawing.Point(185, 352);
             this.ui_bonus_hon.Maximum = new decimal(new int[] {
             2,
             0,
@@ -1073,7 +1068,7 @@
             // 
             this.ui_bonus_san.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ui_bonus_san.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ui_bonus_san.Location = new System.Drawing.Point(187, 392);
+            this.ui_bonus_san.Location = new System.Drawing.Point(185, 392);
             this.ui_bonus_san.Maximum = new decimal(new int[] {
             2,
             0,
@@ -1090,7 +1085,7 @@
             this.ui_score_hon.BackColor = System.Drawing.Color.RoyalBlue;
             this.ui_score_hon.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_score_hon.ForeColor = System.Drawing.Color.White;
-            this.ui_score_hon.Location = new System.Drawing.Point(279, 352);
+            this.ui_score_hon.Location = new System.Drawing.Point(276, 352);
             this.ui_score_hon.Name = "ui_score_hon";
             this.ui_score_hon.ReadOnly = true;
             this.ui_score_hon.Size = new System.Drawing.Size(84, 39);
@@ -1104,7 +1099,7 @@
             this.ui_score_san.BackColor = System.Drawing.Color.RoyalBlue;
             this.ui_score_san.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_score_san.ForeColor = System.Drawing.Color.White;
-            this.ui_score_san.Location = new System.Drawing.Point(279, 392);
+            this.ui_score_san.Location = new System.Drawing.Point(276, 392);
             this.ui_score_san.Name = "ui_score_san";
             this.ui_score_san.ReadOnly = true;
             this.ui_score_san.Size = new System.Drawing.Size(84, 39);
@@ -1118,7 +1113,7 @@
             this.ui_mod_hon.BackColor = System.Drawing.Color.White;
             this.ui_mod_hon.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_mod_hon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ui_mod_hon.Location = new System.Drawing.Point(371, 352);
+            this.ui_mod_hon.Location = new System.Drawing.Point(367, 352);
             this.ui_mod_hon.Name = "ui_mod_hon";
             this.ui_mod_hon.ReadOnly = true;
             this.ui_mod_hon.Size = new System.Drawing.Size(84, 39);
@@ -1132,7 +1127,7 @@
             this.ui_mod_san.BackColor = System.Drawing.Color.White;
             this.ui_mod_san.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_mod_san.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ui_mod_san.Location = new System.Drawing.Point(371, 392);
+            this.ui_mod_san.Location = new System.Drawing.Point(367, 392);
             this.ui_mod_san.Name = "ui_mod_san";
             this.ui_mod_san.ReadOnly = true;
             this.ui_mod_san.Size = new System.Drawing.Size(84, 39);
@@ -1146,7 +1141,7 @@
             this.ui_cost_hon.BackColor = System.Drawing.Color.White;
             this.ui_cost_hon.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_cost_hon.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.ui_cost_hon.Location = new System.Drawing.Point(463, 352);
+            this.ui_cost_hon.Location = new System.Drawing.Point(458, 352);
             this.ui_cost_hon.Name = "ui_cost_hon";
             this.ui_cost_hon.ReadOnly = true;
             this.ui_cost_hon.Size = new System.Drawing.Size(84, 39);
@@ -1160,7 +1155,7 @@
             this.ui_cost_san.BackColor = System.Drawing.Color.White;
             this.ui_cost_san.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ui_cost_san.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.ui_cost_san.Location = new System.Drawing.Point(463, 392);
+            this.ui_cost_san.Location = new System.Drawing.Point(458, 392);
             this.ui_cost_san.Name = "ui_cost_san";
             this.ui_cost_san.ReadOnly = true;
             this.ui_cost_san.Size = new System.Drawing.Size(84, 39);
@@ -1192,11 +1187,74 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.buttonReset, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 1);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(273, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(91, 90);
+            this.tableLayoutPanel3.TabIndex = 74;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.checkBoxSanity, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.checkBoxHonor, 0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 45);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(91, 45);
+            this.tableLayoutPanel4.TabIndex = 61;
+            // 
+            // checkBoxHonor
+            // 
+            this.checkBoxHonor.AutoSize = true;
+            this.checkBoxHonor.Location = new System.Drawing.Point(3, 3);
+            this.checkBoxHonor.Name = "checkBoxHonor";
+            this.checkBoxHonor.Size = new System.Drawing.Size(55, 16);
+            this.checkBoxHonor.TabIndex = 0;
+            this.checkBoxHonor.Text = "Honor";
+            this.checkBoxHonor.UseVisualStyleBackColor = true;
+            this.checkBoxHonor.CheckedChanged += new System.EventHandler(this.checkBoxHonor_CheckedChanged);
+            // 
+            // checkBoxSanity
+            // 
+            this.checkBoxSanity.AutoSize = true;
+            this.checkBoxSanity.Location = new System.Drawing.Point(3, 25);
+            this.checkBoxSanity.Name = "checkBoxSanity";
+            this.checkBoxSanity.Size = new System.Drawing.Size(55, 17);
+            this.checkBoxSanity.TabIndex = 1;
+            this.checkBoxSanity.Text = "Sanity";
+            this.checkBoxSanity.UseVisualStyleBackColor = true;
+            this.checkBoxSanity.CheckedChanged += new System.EventHandler(this.checkBoxSanity_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(32, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 42);
+            this.label1.TabIndex = 75;
+            this.label1.Text = "Total Points:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 462);
+            this.ClientSize = new System.Drawing.Size(565, 462);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -1228,6 +1286,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ui_bonus_san)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1252,7 +1313,6 @@
         private System.Windows.Forms.NumericUpDown ui_stat_cha;
         private System.Windows.Forms.TextBox ui_points_remaining;
         private System.Windows.Forms.NumericUpDown ui_points_total;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -1301,6 +1361,11 @@
         private System.Windows.Forms.TextBox ui_mod_san;
         private System.Windows.Forms.TextBox ui_cost_hon;
         private System.Windows.Forms.TextBox ui_cost_san;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.CheckBox checkBoxSanity;
+        private System.Windows.Forms.CheckBox checkBoxHonor;
+        private System.Windows.Forms.Label label1;
     }
 }
 

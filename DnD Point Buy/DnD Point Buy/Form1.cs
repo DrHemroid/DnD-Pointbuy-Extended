@@ -23,10 +23,14 @@ namespace DnD_Point_Buy
         public Form1()
         {
             InitializeComponent();
+            DisableAllTabIndexes(this.Controls);
+            EnableSomeTabIndexes();
             this.ui_bonus_hon.ValueChanged += new System.EventHandler(this.ui_bonus_hon_ValueChanged);
             this.ui_stat_hon.ValueChanged += new System.EventHandler(this.ui_stat_hon_ValueChanged);
             this.ui_bonus_san.ValueChanged += new System.EventHandler(this.ui_bonus_san_ValueChanged);
             this.ui_stat_san.ValueChanged += new System.EventHandler(this.ui_stat_san_ValueChanged);
+            ui_stat_san.Enabled = checkBoxSanity.Checked;
+            ui_stat_hon.Enabled = checkBoxHonor.Checked;
             UpdateAllVariables();
             UpdateAllUI();
         }
@@ -97,6 +101,28 @@ namespace DnD_Point_Buy
 
         private int CalcMod(int stat){
             return (int)Math.Floor((stat-10.0)/2);
+        }
+
+        private void checkBoxHonor_CheckedChanged(object sender, EventArgs e) {
+            if (!checkBoxHonor.Checked && (ui_stat_hon.Value > 8 || (points_remaining >= 8- ui_stat_hon.Value))) { 
+                ui_stat_hon.Value = 8;
+            }
+            ui_stat_hon.Enabled = checkBoxHonor.Checked;
+            if (checkBoxHonor.Checked)
+                ui_points_total.Value += 3;
+            else
+                ui_points_total.Value -= 3;
+        }
+
+        private void checkBoxSanity_CheckedChanged(object sender, EventArgs e) {
+            if (!checkBoxSanity.Checked && (ui_stat_san.Value > 8 || (points_remaining >= 8 - ui_stat_san.Value))) {
+                ui_stat_san.Value = 8;
+            }
+            ui_stat_san.Enabled = checkBoxSanity.Checked;
+            if (checkBoxSanity.Checked)
+                ui_points_total.Value += 3;
+            else
+                ui_points_total.Value -= 3;
         }
 
         private void UpdateCalculations()
@@ -320,6 +346,10 @@ namespace DnD_Point_Buy
                 SetMinimumStats(8);
                 SetMaximumStats(15);
                 ui_points_total.Value = 27;
+                if (checkBoxHonor.Checked)
+                    ui_points_total.Value += 3;
+                if (checkBoxSanity.Checked)
+                    ui_points_total.Value += 3;
                 ui_points_total.Enabled = false;
             }
 
@@ -363,6 +393,48 @@ namespace DnD_Point_Buy
                 ui_bonus_hon.Maximum = 10;
                 ui_bonus_san.Maximum = 10;
             }
+        }
+
+        private void DisableAllTabIndexes(Control.ControlCollection controls) {
+            foreach (Control c in controls) {
+                c.TabStop = false;
+                DisableAllTabIndexes(c.Controls);
+            }
+        }
+
+        private void EnableSomeTabIndexes() {
+            ui_stat_str.TabStop = true;
+            ui_stat_str.TabIndex = 1;
+            ui_stat_dex.TabStop = true;
+            ui_stat_dex.TabIndex = 2;
+            ui_stat_con.TabStop = true;
+            ui_stat_con.TabIndex = 3;
+            ui_stat_int.TabStop = true;
+            ui_stat_int.TabIndex = 4;
+            ui_stat_wis.TabStop = true;
+            ui_stat_wis.TabIndex = 5;
+            ui_stat_cha.TabStop = true;
+            ui_stat_cha.TabIndex = 6;
+            ui_stat_hon.TabStop = true;
+            ui_stat_hon.TabIndex = 7;
+            ui_stat_san.TabStop = true;
+            ui_stat_san.TabIndex = 8;
+            ui_bonus_str.TabStop = true;
+            ui_bonus_str.TabIndex = 9;
+            ui_bonus_dex.TabStop = true;
+            ui_bonus_dex.TabIndex = 10;
+            ui_bonus_con.TabStop = true;
+            ui_bonus_con.TabIndex = 11;
+            ui_bonus_int.TabStop = true;
+            ui_bonus_int.TabIndex = 12;
+            ui_bonus_wis.TabStop = true;
+            ui_bonus_wis.TabIndex = 13;
+            ui_bonus_cha.TabStop = true;
+            ui_bonus_cha.TabIndex = 14;
+            ui_bonus_hon.TabStop = true;
+            ui_bonus_hon.TabIndex = 15;
+            ui_bonus_san.TabStop = true;
+            ui_bonus_san.TabIndex = 16;
         }
 
 
